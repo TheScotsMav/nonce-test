@@ -4,6 +4,7 @@ import { GetServerSidePropsContext, InferGetServerSidePropsType } from 'next/typ
 
 const inter = Inter({ subsets: ['latin'] })
 
+// Doesn't actually need to do anything, could be just return { props: {} }
 export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
   const nonce = ctx.req.headers['x-nonce'];
   return { props: {nonce} };
